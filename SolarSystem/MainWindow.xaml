@@ -136,9 +136,9 @@
         </Ellipse>
         <Grid Background="White" Width="250" Height="250">
             <Label Content="Скорость" Height="30" Margin="0,10,0,210"/>
-            <Slider x:Name="SpeedSlider" Minimum="-59" Maximum="-1" Value="-59" Height="30" Margin="0,45,0,175"/>
+            <Slider x:Name="SpeedSlider" Minimum="-15" Maximum="-1" Value="-15" Height="30" Margin="0,45,0,175"/>
             <Label Content="Планета" Height="30" Margin="0,80,0,140"/>
-            <ComboBox x:Name="PlanetsBox" Height="30" Margin="0,115,0,105" SelectionChanged="PlanetsBox_SelectionChanged">
+            <ComboBox x:Name="PlanetsBox" SelectedIndex="0" Height="30" Margin="0,115,0,105" SelectionChanged="PlanetsBox_SelectionChanged">
                 <ComboBoxItem Content="Меркурий"/>
                 <ComboBoxItem Content="Венера"/>
                 <ComboBoxItem Content="Земля"/>
