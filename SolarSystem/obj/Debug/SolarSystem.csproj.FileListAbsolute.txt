@@ -1,0 +1,15 @@
+C:\Users\HerpDerp\source\repos\SolarSystem\SolarSystem\bin\Debug\SolarSystem.exe.config
+C:\Users\HerpDerp\source\repos\SolarSystem\SolarSystem\bin\Debug\SolarSystem.exe
+C:\Users\HerpDerp\source\repos\SolarSystem\SolarSystem\bin\Debug\SolarSystem.pdb
+C:\Users\HerpDerp\source\repos\SolarSystem\SolarSystem\obj\Debug\SolarSystem.csprojAssemblyReference.cache
+C:\Users\HerpDerp\source\repos\SolarSystem\SolarSystem\obj\Debug\MainWindow.g.cs
+C:\Users\HerpDerp\source\repos\SolarSystem\SolarSystem\obj\Debug\App.g.cs
+C:\Users\HerpDerp\source\repos\SolarSystem\SolarSystem\obj\Debug\SolarSystem_MarkupCompile.cache
+C:\Users\HerpDerp\source\repos\SolarSystem\SolarSystem\obj\Debug\SolarSystem_MarkupCompile.lref
+C:\Users\HerpDerp\source\repos\SolarSystem\SolarSystem\obj\Debug\MainWindow.baml
+C:\Users\HerpDerp\source\repos\SolarSystem\SolarSystem\obj\Debug\SolarSystem.g.resources
+C:\Users\HerpDerp\source\repos\SolarSystem\SolarSystem\obj\Debug\SolarSystem.Properties.Resources.resources
+C:\Users\HerpDerp\source\repos\SolarSystem\SolarSystem\obj\Debug\SolarSystem.csproj.GenerateResource.cache
+C:\Users\HerpDerp\source\repos\SolarSystem\SolarSystem\obj\Debug\SolarSystem.csproj.CoreCompileInputs.cache
+C:\Users\HerpDerp\source\repos\SolarSystem\SolarSystem\obj\Debug\SolarSystem.exe
+C:\Users\HerpDerp\source\repos\SolarSystem\SolarSystem\obj\Debug\SolarSystem.pdb
