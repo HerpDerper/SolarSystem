@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:SolarSystem"
         mc:Ignorable="d"
-        Title="MainWindow" ResizeMode="NoResize" Width="1600" Height="1000" >
+        Title="MainWindow" ResizeMode="NoResize" Width="1600" Height="1000" WindowStartupLocation="CenterScreen">
     <Canvas Background="#080424">
         <Path>
             <Path.Data>
@@ -64,9 +64,9 @@
         <Ellipse Name="Sun" Width="50" Height="50" Canvas.Top="485" Canvas.Left="785" Fill="Yellow" />
         <Ellipse Name="Mercury" Width="10" Height="10" Fill="Orange">
             <Ellipse.Triggers>
-                <EventTrigger RoutedEvent="Window.Loaded">
-                    <BeginStoryboard>
-                        <Storyboard x:Name="MercuryStoryboard">
+                <EventTrigger RoutedEvent="FrameworkElement.Loaded">
+                    <BeginStoryboard x:Name="MercuryBegin">
+                        <Storyboard x:Name="MercuryStoryboard" >
                             <DoubleAnimationUsingPath x:Name="Double1Y" Duration="0:0:1" RepeatBehavior="Forever" PathGeometry="{Binding ElementName = Path1}" Source="Y" Storyboard.TargetProperty="(Canvas.Top)" />
                             <DoubleAnimationUsingPath x:Name="Double1X" Duration="0:0:1" RepeatBehavior="Forever" PathGeometry="{Binding ElementName = Path1}" Source="X" Storyboard.TargetProperty="(Canvas.Left)" />
                         </Storyboard>
@@ -76,9 +76,9 @@
         </Ellipse>
         <Ellipse Name="Venus" Width="20" Height="20" Fill="Wheat">
             <Ellipse.Triggers>
-                <EventTrigger RoutedEvent="Window.Loaded">
-                    <BeginStoryboard>
-                        <Storyboard x:Name="VenusStoryboard">
+                <EventTrigger RoutedEvent="FrameworkElement.Loaded">
+                    <BeginStoryboard x:Name="VenusBegin">
+                        <Storyboard x:Name="VenusStoryboard" >
                             <DoubleAnimationUsingPath x:Name="Double2Y" Duration="0:0:2" RepeatBehavior="Forever" PathGeometry="{Binding ElementName = Path2}" Source="Y" Storyboard.TargetProperty="(Canvas.Top)" />
                             <DoubleAnimationUsingPath x:Name="Double2X" Duration="0:0:2" RepeatBehavior="Forever" PathGeometry="{Binding ElementName = Path2}" Source="X" Storyboard.TargetProperty="(Canvas.Left)" />
                         </Storyboard>
@@ -88,8 +88,8 @@
         </Ellipse>
         <Ellipse Name="Earth" Width="25" Height="25" Fill="Blue">
             <Ellipse.Triggers>
-                <EventTrigger RoutedEvent="Window.Loaded">
-                    <BeginStoryboard>
+                <EventTrigger RoutedEvent="FrameworkElement.Loaded">
+                    <BeginStoryboard x:Name="EarthBegin">
                         <Storyboard x:Name="EarthStoryboard">
                             <DoubleAnimationUsingPath x:Name="Double3Y" Duration="0:0:3" RepeatBehavior="Forever" PathGeometry="{Binding ElementName = Path3}" Source="Y" Storyboard.TargetProperty="(Canvas.Top)" />
                             <DoubleAnimationUsingPath x:Name="Double3X" Duration="0:0:3" RepeatBehavior="Forever" PathGeometry="{Binding ElementName = Path3}" Source="X" Storyboard.TargetProperty="(Canvas.Left)" />
@@ -100,8 +100,8 @@
         </Ellipse>
         <Ellipse Name="Mars" Width="15" Height="15" Fill="Red">
             <Ellipse.Triggers>
-                <EventTrigger RoutedEvent="Window.Loaded">
-                    <BeginStoryboard>
+                <EventTrigger RoutedEvent="FrameworkElement.Loaded">
+                    <BeginStoryboard x:Name="MarsBegin">
                         <Storyboard x:Name="MarsStoryboard">
                             <DoubleAnimationUsingPath x:Name="Double4Y" Duration="0:0:4" RepeatBehavior="Forever" PathGeometry="{Binding ElementName = Path4}" Source="Y" Storyboard.TargetProperty="(Canvas.Top)" />
                             <DoubleAnimationUsingPath x:Name="Double4X" Duration="0:0:4" RepeatBehavior="Forever" PathGeometry="{Binding ElementName = Path4}" Source="X" Storyboard.TargetProperty="(Canvas.Left)" />
@@ -112,8 +112,8 @@
         </Ellipse>
         <Ellipse Name="Jupiter" Width="40" Height="40" Fill="SaddleBrown">
             <Ellipse.Triggers>
-                <EventTrigger RoutedEvent="Window.Loaded">
-                    <BeginStoryboard>
+                <EventTrigger RoutedEvent="FrameworkElement.Loaded">
+                    <BeginStoryboard x:Name="JupiterBegin">
                         <Storyboard x:Name="JupiterStoryboard">
                             <DoubleAnimationUsingPath x:Name="Double5Y" Duration="0:0:5" RepeatBehavior="Forever" PathGeometry="{Binding ElementName = Path5}" Source="Y" Storyboard.TargetProperty="(Canvas.Top)" />
                             <DoubleAnimationUsingPath x:Name="Double5X" Duration="0:0:5" RepeatBehavior="Forever" PathGeometry="{Binding ElementName = Path5}" Source="X" Storyboard.TargetProperty="(Canvas.Left)" />
@@ -124,8 +124,8 @@
         </Ellipse>
         <Ellipse Name="Saturn" Width="35" Height="35" Fill="RosyBrown">
             <Ellipse.Triggers>
-                <EventTrigger RoutedEvent="Window.Loaded">
-                    <BeginStoryboard>
+                <EventTrigger RoutedEvent="FrameworkElement.Loaded">
+                    <BeginStoryboard x:Name="SaturnBegin">
                         <Storyboard x:Name="SaturnStoryboard">
                             <DoubleAnimationUsingPath x:Name="Double6Y" Duration="0:0:6" RepeatBehavior="Forever" PathGeometry="{Binding ElementName = Path6}" Source="Y" Storyboard.TargetProperty="(Canvas.Top)" />
                             <DoubleAnimationUsingPath x:Name="Double6X" Duration="0:0:6" RepeatBehavior="Forever" PathGeometry="{Binding ElementName = Path6}" Source="X" Storyboard.TargetProperty="(Canvas.Left)" />
@@ -147,6 +147,18 @@
                 <ComboBoxItem Content="Сатурн"/>
             </ComboBox>
             <Button x:Name="ChangeSpeedButton" Height="30" Click="ChangeSpeedButton_Click" Content="Изменить скорость" Margin="0,150,0,70" />
+            <Button x:Name="PauseResumedButton" Height="30" Click="PauseResumedButton_Click" Content="Пауза" Margin="0,185,0,35" />
+        </Grid>
+        <Grid Background="White" Width="410" Height="159" Canvas.Left="1184" Canvas.Top="812" >
+            <DataGrid x:Name="PlanetGrid" AutoGenerateColumns="False" CanUserAddRows="False" CanUserResizeColumns="False" CanUserDeleteRows="False" CanUserReorderColumns="False">
+                <DataGrid.Columns>
+                    <DataGridTextColumn Header="Порядок" Binding="{Binding Path=Order}"/>
+                    <DataGridTextColumn Header="Название" Binding="{Binding Path=PlanetName}"/>
+                    <DataGridTextColumn Header="Площадь" Binding="{Binding Path=Square}" />
+                    <DataGridTextColumn Header="Объём" Binding="{Binding Path=Volume}"  />
+                    <DataGridTextColumn Header="Масса " Binding="{Binding Path=Mass}"/>
+                </DataGrid.Columns>
+            </DataGrid>
         </Grid>
     </Canvas>
 </Window>
